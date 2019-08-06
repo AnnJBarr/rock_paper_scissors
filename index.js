@@ -11,13 +11,13 @@ function handleUserResponse(response){
     const options = ['rock', 'paper', 'scissors'];
     console.log(response.toLowerCase());
     //Ignore capitalisation of words
-    if (!(response.toLowerCase() ==='rock' || response.toLowerCase() ==='paper' ||  response.toLowerCase() === 'scissor') )
+    if (!(response.toLowerCase() ==='rock' || response.toLowerCase() ==='paper' ||  response.toLowerCase() === 'scissors') )
             {var notvalid = true;
             console.log("Your response is not valid");
              //readline.question("Please choose again!\n", response); Want to get them to answer again - this doesn't work
             } else { var notvalid = false
                 console.log("I like your response");}
-            console.log(notvalid);
+            //console.log(notvalid);
     
     //Validate user choice and tell them if they made a mistake
 
@@ -37,13 +37,13 @@ function handleUserResponse(response){
     //Report on who won
     if (notvalid == false){
         if (response.toLowerCase() === compplay) {
-            console.log("It's a draw!")
+            console.log("\x1b[33m", "It's a draw!")
         } else {
             if (response.toLowerCase() === 'rock' && compplay === 'scissors'
                 || response.toLowerCase() === 'scissors' && compplay === 'paper'
                 || response.toLowerCase() === 'paper' && compplay === 'rock') {
-                    console.log("Player wins!")
-                } else console.log("Computer wins!");
+                    console.log("\x1b[35m", "Player wins!")
+                } else console.log("\x1b[36m", "Computer wins!");
         }
     } else {
         console.log("You must choose one of rock, paper or scissors - please play again");
