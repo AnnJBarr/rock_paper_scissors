@@ -22,6 +22,10 @@ function handleUserResponse(response){
     
 
     //Make a random selection for the computer
+    var randomint = Math.floor(Math.random() * (3));
+    console.log(randomint);
+    var compplay = options[randomint];
+    console.log("Computer chose: ", compplay);
 
     //Compare the two choices
     //Rock wins over scissors
